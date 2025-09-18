@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>10-1 句子填空挑戰</title>
+<title>13-1 句子填空挑戰</title>
 <style>
 body { font-family: sans-serif; max-width: 600px; margin: auto; text-align: center; padding: 30px 15px; }
 #logo, #logo-game { width: 150px; max-width: 80%; margin-bottom: 10px; display: block; margin-left: auto; margin-right: auto; }
@@ -46,7 +46,7 @@ if (password !== "1231") { alert("密碼錯誤，無法進入！"); window.locat
 
 <div id="game-area" class="hidden">
 <img id="logo-game" src="logo.png" alt="Logo"/>
-<div id="game-title">10-1 句子填空挑戰</div>
+<div id="game-title">13-1 句子填空挑戰</div>
 <div id="question-number"></div>
 <div id="timer" style="font-size:18px; color:red; margin-bottom:15px;"></div>
 <div class="question-zh" id="question-ch"></div>
@@ -68,18 +68,18 @@ if (password !== "1231") { alert("密碼錯誤，無法進入！"); window.locat
 
 <script>
 const questions = [
-{ audio: "11100101S.mp3", question: "＿＿이 많습니다.", answer: "옷", full: "옷이 많습니다.", chinese: "衣服很多。" },
-{ audio: "11100102S.mp3", question: "＿＿가 쉽니다.", answer: "할머니", full: "할머니가 쉽니다.", chinese: "奶奶休息。" },
-{ audio: "11100103S.mp3", question: "＿＿가 맵습니다.", answer: "떡볶이", full: "떡볶이가 맵습니다.", chinese: "辣炒年糕很辣。" },
-{ audio: "11100104S.mp3", question: "＿＿가 귀엽습니다.", answer: "강아지", full: "강아지가 귀엽습니다.", chinese: "狗狗很可愛。" },
-{ audio: "11100105S.mp3", question: "＿＿이 유명합니다.", answer: "한국 아이돌", full: "한국 아이돌이 유명합니다.", chinese: "韓國偶像很有名。" },
-{ audio: "11100106S.mp3", question: "＿＿가 예쁩니다.", answer: "원피스", full: "원피스가 예쁩니다.", chinese: "洋裝很漂亮。" },
-{ audio: "11100107S.mp3", question: "＿＿이 큽니다.", answer: "신발", full: "신발이 큽니다.", chinese: "鞋子很大。" },
-{ audio: "11100108S.mp3", question: "＿＿이 많이 먹습니다.", answer: "형", full: "형이 많이 먹습니다.", chinese: "哥哥吃很多。(男生稱呼)" },
-{ audio: "11100109S.mp3", question: "＿＿이 더 빠릅니까?", answer: "지하철", full: "지하철이 더 빠릅니까?", chinese: "地鐵更快嗎？" },
-{ audio: "11100110S.mp3", question: "＿＿가 좋습니다.", answer: "날씨", full: "날씨가 좋습니다.", chinese: "天氣很好。" },
-{ audio: "11100111S.mp3", question: "＿＿이 많이 없습니다", answer: "시간", full: "시간이 많이 없습니다", chinese: "沒有很多時間。" },
-{ audio: "11100112S.mp3", question: "＿＿가 작습니다.", answer: "사이즈", full: "사이즈가 작습니다.", chinese: "尺寸很小。" }
+{ audio: "11110101S.mp3", question: "손님이 ＿＿.", answer: "저녁을 먹습니다", full: "손님이 저녁을 먹습니다.", chinese: "客人吃晚餐。(正式場合結尾)" },
+{ audio: "11110102S.mp3", question: "할아버지가 ＿＿.", answer: "낮잠을 잡니다", full: "할아버지가 낮잠을 잡니다.", chinese: "爺爺睡午覺。(正式場合結尾)" },
+{ audio: "11110103S.mp3", question: "학생들이 ＿＿.", answer: "노래를 부릅니다", full: "학생들이 노래를 부릅니다.", chinese: "學生們唱歌。(正式場合結尾)" },
+{ audio: "11110104S.mp3", question: "아버지가 ＿＿.", answer: "맥주를 마십니다", full: "아버지가 맥주를 마십니다.", chinese: "父親喝啤酒。(正式場合結尾)" },
+{ audio: "11110105S.mp3", question: "딸이 ＿＿.", answer: "수영을 배웁니다", full: "딸이 수영을 배웁니다.", chinese: "女兒學游泳。(正式場合結尾)" },
+{ audio: "11110106S.mp3", question: "＿＿자주 봅니다.", answer: "텔레비전을", full: "텔레비전을 자주 봅니다.", chinese: "常常看電視。" },
+{ audio: "11110107S.mp3", question: "내일 ＿＿.", answer: "일을 합니다", full: "내일 일을 합니다.", chinese: "明天工作。(正式場合結尾)" },
+{ audio: "11110108S.mp3", question: "오늘 ＿＿.", answer: "빵을 만듭니다", full: "오늘 빵을 만듭니다.", chinese: "今天做麵包。(正式場合結尾)" },
+{ audio: "11110109S.mp3", question: "비서가 ＿＿.", answer: "편지를 씁니다", full: "비서가 편지를 씁니다.", chinese: "秘書寫信。(正式場合結尾)" },
+{ audio: "11110110S.mp3", question: "선생님이 ＿＿.", answer: "신문을 읽습니다", full: "선생님이 신문을 읽습니다.", chinese: "老師讀報紙。(正式場合結尾)" },
+{ audio: "11110111S.mp3", question: "어머니가 ＿＿.", answer: "음악을 듣습니다", full: "어머니가 음악을 듣습니다.", chinese: "母親聽音樂。(正式場合結尾)" },
+{ audio: "11110112S.mp3", question: "동생이 ＿＿ 가끔 입습니다.", answer: "치마를", full: "동생이 치마를 가끔 입습니다.", chinese: "妹妹偶爾穿裙子。" }
 ];
 
 const modeSelectDiv=document.getElementById("mode-select");
@@ -103,8 +103,8 @@ let shuffledQuestions=[],current=0,correct=0,finalScore=0;
 let timer=null,timeLeft=0,timerStarted=false,currentMode=null,startTime=null;
 
 // 顯示標題與送表單標題
-const displayTitle = "10-1 句子填空挑戰";
-const fullTitle = "11-10-1 句子填空挑戰";
+const displayTitle = "13-1 句子填空挑戰";
+const fullTitle = "11-13-1 句子填空挑戰";
 
 function shuffle(array){for(let i=array.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[array[i],array[j]]=[array[j],array[i]];}return array;}
 
